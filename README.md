@@ -1,20 +1,50 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# SIM_BET.ARCH - Sports Betting Simulator
 
-# Run and deploy your AI Studio app
+A high-performance, full-stack prototype of a sports betting platform. It features a React frontend utilizing modern state-management patterns and an Express.js backend that simulates a continuous, live-ticking odds event bus.
 
-This contains everything you need to run your app locally.
+## 🚀 Features
 
-View your app in AI Studio: https://ai.studio/apps/221f9eea-e358-4bb0-9779-95b9a73a9a34
+*   **Live Event Bus:** An Express server continuously generates and broadcasts simulated match data, score updates, and fluctuating odds.
+*   **Modular Architecture:** The frontend is built using **TanStack Query** (React Query) for server-state synchronization (polling the event bus) and **Zustand** for hyper-fast client-state management.
+*   **Bet Slip Engine:** Assemble betting tickets seamlessly. Supports both **Single** and **Accumulator** (Parlay) bets, with real-time combined odds and potential payout calculations.
+*   **Playground Wallet:** A mock wallet system allowing you to deposit play credits and place wagers.
+*   **Admin Settle Tool:** A manual control panel to finalize matches, trigger settlements, and automatically process winning/losing tickets across the system.
 
-## Run Locally
+## 🛠️ Tech Stack
 
-**Prerequisites:**  Node.js
+*   **Frontend:** React 19, TypeScript, Vite, TailwindCSS (Vanilla CSS styling), Lucide-React
+*   **State Management:** TanStack Query v5, Zustand
+*   **Backend:** Express.js, Node.js (with internal mocked database and event bus)
 
+## 💻 Local Development
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+To run this simulator locally on your machine:
+
+1.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+2.  **Start the Full-Stack Dev Server**
+    ```bash
+    npm run dev
+    ```
+    *This will simultaneously start the Express API backend and the Vite frontend server.*
+
+3.  Open `http://localhost:5173` in your browser.
+
+## ☁️ Deployment (Render.com)
+
+This application is configured as a unified full-stack build, meaning both the frontend and backend are served together in production. It is optimized for deployment on platforms that support persistent Node.js servers, like **Render.com**.
+
+1. Create a new **Web Service** on Render and connect your GitHub repository.
+2. Set the **Build Command**:
+   ```bash
+   npm run build
+   ```
+3. Set the **Start Command**:
+   ```bash
+   npm run start
+   ```
+
+*(Render will automatically assign the `PORT` environment variable, which the Express server will securely bind to).*
