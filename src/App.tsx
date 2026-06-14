@@ -73,8 +73,8 @@ function BettingApp() {
       {/* FOOTER STATS */}
       <footer className="h-8 border-t border-[#333] bg-[#050505] flex items-center justify-between px-6 text-[9px] uppercase tracking-widest text-[#444] shrink-0">
         <div>SOCKET_CONNECTED: PROTO_OK</div>
-        <div className="hidden sm:block">TX_BLOCK_HASH: 0x8df...29ca71b</div>
-        <div>© 2026 ARCH_SYSTEMS PROTOTYPE LAYER</div>
+        <div className="hidden sm:block text-[#00FF41]">ENGINEERED BY BANJI</div>
+        <div>© 2026 BANJI'S GAME NIGHT</div>
       </footer>
     </div>
   );
