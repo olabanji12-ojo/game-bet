@@ -1,0 +1,6 @@
+{
+  "name": "Sports Betting Simulator",
+  "description": "A full-stack sports betting simulation prototype featuring mock credit wallet, live match feed, real-time odds fluctuations, dynamic betslip calculations, and transactional settle tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
