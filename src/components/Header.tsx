@@ -19,7 +19,7 @@ export const Header: React.FC<{ balance: number }> = ({ balance }) => {
         <div className="w-3 h-3 bg-[#00FF41] rounded-full animate-pulse shadow-[0_0_8px_#00FF41]"></div>
         <div>
           <h1 className="text-xl font-black tracking-tighter text-white flex items-center gap-2">
-            BANJI'S GAME NIGHT <span className="text-xs font-normal text-[#666] bg-[#111] px-2 py-0.5 border border-[#222]">Prototype</span>
+            BANJI <span className="text-xs font-normal text-[#666] bg-[#111] px-2 py-0.5 border border-[#222]">Prototype</span>
           </h1>
         </div>
         <span className="hidden md:inline text-[10px] text-[#666] border border-[#333] px-2 py-0.5">
