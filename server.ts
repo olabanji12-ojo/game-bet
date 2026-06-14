@@ -1,14 +1,10 @@
 import express from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
-import { fileURLToPath } from "url";
 import { db } from "./src/server/db";
 import { workerService } from "./src/server/workers";
 import { eventBus } from "./src/server/eventBus";
 import { BetCalculationFactory } from "./src/server/factory";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 async function startServer() {
   const app = express();
